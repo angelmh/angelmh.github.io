@@ -1,41 +1,106 @@
-<html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Resume Angel Montelongo">
-        <meta name="author" content="Angel Montelongo">
-        <title>Resume - Angel Montelongo</title>
-       <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"
+<html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete" id="all">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Resume Angel Montelongo">
+    <meta name="author" content="Angel Montelongo">
+    <title>Resume - Angel Montelongo</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"
         <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css">
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet">
-    </head>
-    <body id="page-top">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet">
+    <script>
+        var e = document.getElementById("lang");
+
+        function myFunction() {
+            const div_lang_EN = document.getElementById("div_lang_EN");
+            const div_lang_ES = document.getElementById("div_lang_ES");
 
 
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Angel Montelongo</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.png" alt="..."></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger active" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
-                </ul>
+            const div_lang_navbar_ES = document.getElementById("div_lang_navbar_ES");
+
+            const div_lang_navbar_EN = document.getElementById("div_lang_navbar_EN");
+            const html_all = document.getElementById("all");
+
+            var x = document.getElementById("lang").value;
+            if (x == 1)//english
+            {
+                div_lang_EN.style.display = "block";
+                div_lang_ES.style.display = "none";
+
+                div_lang_navbar_EN.style.display = "block";
+                div_lang_navbar_ES.style.display = "none";
+
+                html_all.setAttribute('lang', 'en');
+            }
+            else if (x == 2) {
+                div_lang_ES.style.display = "block";
+                div_lang_navbar_ES.style.display = "block";
+
+                div_lang_EN.style.display = "none";
+                div_lang_navbar_EN.style.display = "none";
+
+                html_all.setAttribute('lang', 'es');
+            }
+        }
+    </script>
+</head>
+<body id="page-top">
+
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Angel Montelongo</span>
+            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.png" alt="..."></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav" id="div_lang_navbar_EN">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+            </ul>
+            <ul class="navbar-nav" id="div_lang_navbar_ES" style="display: none;">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#acerca">Acerca de</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experiencia">Experiencia</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#educacion">Educación</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#habilidades">Habilidades</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#intereses">Intereses</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#reconocimientos">Reconocimientos</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+<!-- Page Content-->
+<div class="container-fluid p-0">
+
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-2">
+                    <select class="form-select" aria-label="Default select example" id="lang" name="lang" onchange="myFunction()">
+                        <option value="1">English</option>
+                        <option value="2">Spanish</option>
+                    </select>
+                </div>
             </div>
-        </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
+        </div>
+
+
+
+
+        <div id="div_lang_EN" name="div_lang_EN">
+            <!-- Start English -->
             <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
@@ -48,15 +113,15 @@
                         joseangel.moh@gmail.com
                     </div>
                     <p class="lead mb-5">
-I am a Software Engineer with experience in development of Web sites, .NET Systems, Web APIS, Creation of automatic processes for different purposes. Also in configurations or customizations for Microsoft Power Platform and Dynamics 365 in the Frontend and Back End, creation or changes in Microsoft Power BI Dashboards or Reports, Data Migration in Microsoft Dynamics 365 Entities. I like research in solving root cause issues.
-I also have experience in other tools, languages, or things that I have learned along the way.
- </p>
+                        I am a Software Engineer with experience in development of Web sites, .NET Systems, Web APIS, Creation of automatic processes for different purposes. Also in configurations or customizations for Microsoft Power Platform and Dynamics 365 in the Frontend and Back End, creation or changes in Microsoft Power BI Dashboards or Reports, Data Migration in Microsoft Dynamics 365 Entities. I like research in solving root cause issues.
+                        I also have experience in other tools, languages, or things that I have learned along the way.
+                    </p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/angel-montelongo/"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/angelmh">  <i class="fab fa-github"></i>  </a>
                         <a class="social-icon" href="https://drive.google.com/file/d/1I5YY0JKILbHvt5xmZz7QBHzPit9mx3I_/view?usp=drive_link" data-toggle="tooltip" data-placement="top" title="Short resume"> <svg class="svg-inline--fa fa-file-pdf" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V304H296 272 184 160c-35.3 0-64 28.7-64 64v80 48 16H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM160 352h24c30.9 0 56 25.1 56 56s-25.1 56-56 56h-8v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm24 80c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8v48h8zm88-80h24c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H272c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm24 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16h-8v96h8zm72-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H400v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H400v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg><!-- <i class="fa-solid fa-file-pdf"></i> Font Awesome fontawesome.com -->  </a>
-                        <a class="social-icon" href="https://drive.google.com/file/d/1bwpZOkbRFiF0BiObYaW3jBQaJk-tJJSt/view?usp=sharing" data-toggle="tooltip" data-placement="top" title="Full resume"> <svg class="svg-inline--fa fa-file-pdf" aria-hidden="true" focusable="false" data-prefix="far" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zm96-112h24c30.9 0 56 25.1 56 56s-25.1 56-56 56h-8v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm24 80c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8v48h8zm72-64c0-8.8 7.2-16 16-16h24c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H272c-8.8 0-16-7.2-16-16V368zm32 112h8c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16h-8v96zm96-128h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H400v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H400v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368c0-8.8 7.2-16 16-16z"></path></svg><!-- <i class="fa-regular fa-file-pdf"></i> Font Awesome fontawesome.com --> </a> 
-                  </div>
+                        <a class="social-icon" href="https://drive.google.com/file/d/1bwpZOkbRFiF0BiObYaW3jBQaJk-tJJSt/view?usp=sharing" data-toggle="tooltip" data-placement="top" title="Full resume"> <svg class="svg-inline--fa fa-file-pdf" aria-hidden="true" focusable="false" data-prefix="far" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zm96-112h24c30.9 0 56 25.1 56 56s-25.1 56-56 56h-8v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm24 80c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8v48h8zm72-64c0-8.8 7.2-16 16-16h24c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H272c-8.8 0-16-7.2-16-16V368zm32 112h8c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16h-8v96zm96-128h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H400v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H400v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368c0-8.8 7.2-16 16-16z"></path></svg><!-- <i class="fa-regular fa-file-pdf"></i> Font Awesome fontawesome.com --> </a>
+                    </div>
                 </div>
             </section>
             <hr class="m-0">
@@ -67,7 +132,7 @@ I also have experience in other tools, languages, or things that I have learned 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">SR Analyst Programmer</h3>
-                            <div class="subheading mb-3">AutoZone Business and Technology Store Support Center  ( Work modality: Hybrid)</div>
+                            <div class="subheading mb-3">AutoZone Business and Technology Store Support Center (Work modality: Hybrid) Cd.Chihuahua, CHH.</div>
                             <p>
                                 The platform is a Customer Relationship Management (CRM) implemented in the cloud with
                                 its customer configurations and customizations, with integrations from local systems or
@@ -77,39 +142,39 @@ I also have experience in other tools, languages, or things that I have learned 
                                 and customizations.
                             </p>
                             <ul>
-                              <li>Worked on factoring of programs developed with Microsoft
-                                  Power Apps and Plugins technology in the Microsoft Dynamics 365 Sales application
-                                  where subscriptions were used to partially cancel the products or completely cancel
-                                  the subscription. As well as the cancellation of mass subscriptions.
-                              </li>
-                              <li>Worked on factoring of programs developed with Microsoft
-                                  Power Apps and Plugins technology in the Microsoft Dynamics 365 Sales application
-                                  where subscriptions were used to partially cancel the products or completely cancel
-                                  the subscription. As well as the cancellation of mass subscriptions.
-                              </li>
-                              <li>Performed and provided recommendations to repair the problem in issues related to
-                                programs developed in Tibco Cloud Integration technology with Microsoft Dynamics
-                                365 Integration
+                                <li>
+                                    Worked on factoring of programs developed with Microsoft
+                                    Power Apps and Plugins technology in the Microsoft Dynamics 365 Sales application
+                                    where subscriptions were used to partially cancel the products or completely cancel
+                                    the subscription. As well as the cancellation of mass subscriptions.
                                 </li>
                                 <li>
-                                 Developed Query Reports on the Subscription and billing platform (Zuora) that
-                                 served as a Data Source for the migration to MS Dynamics 365 CRM-Dataverse.
+                                    Performed and provided recommendations to repair the problem in issues related to
+                                    programs developed in Tibco Cloud Integration technology with Microsoft Dynamics
+                                    365 Integration
                                 </li>
                                 <li>
-                                Developed Scripts, Microsoft Cloud Flows, Visual Studio SSIS Package with
-                                Kingswaysoft and documentation for the migration of desynchronized data on the
-                                Zuora platform to Microsoft Dynamics 365 CRM. Which greatly reduced data
-                                synchronization issues in CRM and Zuora. And earned an Extra Miller recognition in
-                                08 FY23 for that project.
+                                    Developed Query Reports on the Subscription and billing platform (Zuora) that
+                                    served as a Data Source for the migration to MS Dynamics 365 CRM-Dataverse.
+                                </li>
+                                <li>
+                                    Developed Scripts, Microsoft Cloud Flows, Visual Studio SSIS Package with
+                                    Kingswaysoft and documentation for the migration of desynchronized data on the
+                                    Zuora platform to Microsoft Dynamics 365 CRM. Which greatly reduced data
+                                    synchronization issues in CRM and Zuora. And earned an Extra Miller recognition in
+                                    08 FY23 for that project.
                                 </li>
                                 <li>In charge of data migrations for different requirements in the CRM.</li>
-                                 <li>Creation of Reports from scratch in Power BI using connections such as GCP Google
-                                BigQuery and Dataverse, integrating them into the client's CRM. Made updates to
-                                existing reports.
+                                <li>
+                                    Creation of Reports from scratch in Power BI using connections such as GCP Google
+                                    BigQuery and Dataverse, integrating them into the client's CRM. Made updates to
+                                    existing reports.
                                 </li>
                                 <li>In charge of user administration in Power BI.</li>
-                                 <li>Followed up with CRM vendor to fix issues related to CRM Power BI dashboard
-                                interactions</li>
+                                <li>
+                                    Followed up with CRM vendor to fix issues related to CRM Power BI dashboard
+                                    interactions
+                                </li>
                             </ul>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">March 2022 - January 2024</span></div>
@@ -128,45 +193,45 @@ I also have experience in other tools, languages, or things that I have learned 
                                 company and sending traceability data through REST APIs to customers such as Cisco and Pure Storage.
                             </p>
                             <ul>
-                              <li>Maintenance of the Shop Floor Control Software used for the Client’s production line.</li>
-                              <li>Monitor the programs configured in the Task Scheduler for the correct functioning of the Systems.</li>
-                              <li>Support in production lines to resolve issues, Raising and analyzing requirements.</li>
-                              <li>Creation of new Stored Procedures and logical modifications in Oracle to correct SFC issues.</li>
-                              <li>Creation of Web Service or APIS to connect with systems from another departments.</li>
-                              <li>Creation of new locks, required by Quality Engineers or Process Engineers.</li>
-                              <li>Creation of data reports or visual reports to help the process of Business Unit.</li>
-                              <li>Creation of Programs that send information through HTTP APIS depending on the logic to company Side Foxconn FTX or Foxconn FCZ.</li>
-                              <li>Created a program to read Test Logs from Client stations by consuming an API provided by Client and integrated with SFC.</li>
-                              <li>Implementation of labels for SFC with CodeSoft or Zebra Programming Language (ZPL).</li>
-                              <li>Creation from scratch of a .NET program for manufacturing to use work orders and serial scanning connected to SAP.</li>
-                              <li>Creation from scratch of a .NET program for the administration and management of Stencils, Fixtures and PCBA tools of company used in the 4 buildings.</li>
-                              <li>Update of inherited administrative or manufacturing systems in the business logic and/or framework upgrade for correct operation.</li>
-                              <li>Meetings with the FOC team to implement the Security rules or requirements to local side.</li>
-                              <li>Solutions and analysis support for the implementation of the Face Recognition system.</li>
-                              <li>Creation from scratch of an administrative program for the creation of users in the active directory, database, backend, front end.</li>
-                              <li>Walking through the production lines with the client to show the system.</li>
-                              <li>Training from China FOC team for the implementation of systems.</li>
-                              <li>Creation of reports for the management conference room, made in C# and JavaScript, CSS3, HTML5 libraries</li>
-                              <li>Report consumption developed in Tableau Embedded in C#, using Tokens.</li>
+                                <li>Maintenance of the Shop Floor Control Software used for the Client’s production line.</li>
+                                <li>Monitor the programs configured in the Task Scheduler for the correct functioning of the Systems.</li>
+                                <li>Support in production lines to resolve issues, Raising and analyzing requirements.</li>
+                                <li>Creation of new Stored Procedures and logical modifications in Oracle to correct SFC issues.</li>
+                                <li>Creation of Web Service or APIS to connect with systems from another departments.</li>
+                                <li>Creation of new locks, required by Quality Engineers or Process Engineers.</li>
+                                <li>Creation of data reports or visual reports to help the process of Business Unit.</li>
+                                <li>Creation of Programs that send information through HTTP APIS depending on the logic to company Side Foxconn FTX or Foxconn FCZ.</li>
+                                <li>Created a program to read Test Logs from Client stations by consuming an API provided by Client and integrated with SFC.</li>
+                                <li>Implementation of labels for SFC with CodeSoft or Zebra Programming Language (ZPL).</li>
+                                <li>Creation from scratch of a .NET program for manufacturing to use work orders and serial scanning connected to SAP.</li>
+                                <li>Creation from scratch of a .NET program for the administration and management of Stencils, Fixtures and PCBA tools of company used in the 4 buildings.</li>
+                                <li>Update of inherited administrative or manufacturing systems in the business logic and/or framework upgrade for correct operation.</li>
+                                <li>Meetings with the FOC team to implement the Security rules or requirements to local side.</li>
+                                <li>Solutions and analysis support for the implementation of the Face Recognition system.</li>
+                                <li>Creation from scratch of an administrative program for the creation of users in the active directory, database, backend, front end.</li>
+                                <li>Walking through the production lines with the client to show the system.</li>
+                                <li>Training from China FOC team for the implementation of systems.</li>
+                                <li>Creation of reports for the management conference room, made in C# and JavaScript, CSS3, HTML5 libraries</li>
+                                <li>Report consumption developed in Tableau Embedded in C#, using Tokens.</li>
                                 <li>Creation of Layouts in the Control Point software for the manipulation of different web objects of the 15 screens united for the management conference room.</li>
                                 <li>Support in the creation of Rules, Store Procedures for the creation of BI TableauReports.</li>
                                 <li>Maintenance of Android applications for legacy system in production lines.</li>
                             </ul>
-
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">November 2017 - March 2022</span></div>
                     </div>
-                    
+
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Intern Tech</h3>
-                            <div class="subheading mb-3">DXC Technology (Work modality: On Site)</div>
-                            <p>Configuration Management is a process within software engineering that tracks and
-                            monitors changes to program source code and/or functional and non-functional system
-                            documentation.
-                            Efforts were focused on contributing to the automation of the CM process to facilitate the day-to-day activities of code and document reviews according to Servicio de Administración Tributaria (SAT) client standards.
+                            <div class="subheading mb-3">DXC Technology (Work modality: On Site) Cd. Juárez, Chihuahua.</div>
+                            <p>
+                                Configuration Management is a process within software engineering that tracks and
+                                monitors changes to program source code and/or functional and non-functional system
+                                documentation.
+                                Efforts were focused on contributing to the automation of the CM process to facilitate the day-to-day activities of code and document reviews according to Servicio de Administración Tributaria (SAT) client standards.
                             </p>
-                            <ul> 
+                            <ul>
                                 <li>Main tasks were in Configuration Management, reviews of coding standards,administrative and systems documentation.</li>
                                 <li>Development, testing, debugging of programs for the automation of the CM process</li>
                                 <li>Review of system requirements documentation and administrative documentation.</li>
@@ -178,43 +243,42 @@ I also have experience in other tools, languages, or things that I have learned 
                         <div class="flex-shrink-0"><span class="text-primary">March 2016 – March 2017</span></div>
                     </div>
 
-                   <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Web programmer - Professional Practices </h3>
-                            <div class="subheading mb-3">JUAREZSOFT CONSULTING (Work modality: On Site)</div>
+                            <div class="subheading mb-3">JUAREZSOFT CONSULTING (Work modality: On Site) Cd. Juárez, Chihuahua.</div>
                             <p>
-                                 Analysis, design, development and testing of requirements on Backend using the PHP programming language and different conexions with Web Services SOAP WDSL, APIs                                 
-                            </p>      
-                            <ul>                      
-                                 <li> Development of module for purchasing tickets consuming of Third Party APIs such as Conekta (online payments with credit or debit cards), Google Maps, Google and Facebook Authentication</li>   
-                                 <li> Maintenance of Web Services SOAP WDSL, API and Web Pages  </li>  
-                                 <li> Consumption tests in Postman of Amazon web services (AWS) APIS of the main product of the consulting company </li>  
+                                Analysis, design, development and testing of requirements on Backend using the PHP programming language and different conexions with Web Services SOAP WDSL, APIs
+                            </p>
+                            <ul>
+                                <li> Development of module for purchasing tickets consuming of Third Party APIs such as Conekta (online payments with credit or debit cards), Google Maps, Google and Facebook Authentication</li>
+                                <li> Maintenance of Web Services SOAP WDSL, API and Web Pages  </li>
+                                <li> Consumption tests in Postman of Amazon web services (AWS) APIS of the main product of the consulting company </li>
                             </ul>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">October 2015 – Feb 2016</span></div>
                     </div>
 
-
-                   <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Web programmer</h3>
-                            <div class="subheading mb-3">Proyecto Computación Juárez (Work modality: On Site)</div>
+                            <div class="subheading mb-3">Proyecto Computación Juárez (Work modality: On Site) Cd. Juárez, Chihuahua.</div>
                             <ul>
 
-                                <li>Creation of a web system from scratch for a local food business. Using the Codeigniter PHP framework and MySQL as a database, JavasScript and Bootstrap for the Frontend, 
+                                <li>
+                                    Creation of a web system from scratch for a local food business. Using the Codeigniter PHP framework and MySQL as a database, JavasScript and Bootstrap for the Frontend,
                                     functionalities to print labels, count the total of wasted meat and login
                                 </li>
-                                
+
                             </ul>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">August 2014 – October 2015</span></div>
                     </div>
 
-
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Research assistant - Social Service</h3>
-                            <div class="subheading mb-3">DR. Youness El Hamzoui AT UACJ (Work modality: On Site)</div>
+                            <div class="subheading mb-3">DR. Youness El Hamzoui AT UACJ (Work modality: On Site) Cd. Juárez, Chihuahua.</div>
                             <ul>
                                 <li>Installing Data Mining and Management software </li>
                                 <li>Develop 2D and 3D simulations in MATLAB </li>
@@ -235,9 +299,9 @@ I also have experience in other tools, languages, or things that I have learned 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Autonomous University of Ciudad Juarez (UACJ)</h3>
-                            <div class="subheading mb-3">Bachelor of Science</div> 
+                            <div class="subheading mb-3">Bachelor of Science</div>
                             <div>Bachelor of Software Engineering</div>
-                           
+
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">August 2011 - June 2016</span></div>
                     </div>
@@ -245,7 +309,7 @@ I also have experience in other tools, languages, or things that I have learned 
                         <div class="flex-grow-1">
                             <h3 class="mb-0">College of High School of the State of Chihuahua Plantel 5 (COBACH 5)</h3>
                             <div class="subheading mb-3">Specialty in Accounting and Probability and Statistics</div>
-                             
+
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">August 2008 - June 2011</span></div>
                     </div>
@@ -259,83 +323,80 @@ I also have experience in other tools, languages, or things that I have learned 
                     <div class="subheading mb-3">Programming Languages &amp; Tools</div>
                     <ul class="list-inline dev-icons">
                         <li class="list-inline-item" style="height: 76px;width: 230px;">
-                           <img src="assets/img/PowerPlatform_logo.png" style="width: 100%;"> 
-                         </li>    
+                            <img src="assets/img/PowerPlatform_logo.png" style="width: 100%;">
+                        </li>
                         <li class="list-inline-item" style="height: 76px;width: 160px;">
-                           <img src="assets/img/Dynamics365_logo.png" style="width: 100%;"> 
-                         </li>    
+                            <img src="assets/img/Dynamics365_logo.png" style="width: 100%;">
+                        </li>
                         <li class="list-inline-item" style="height: 50px;width: 78px;">
-                             <img src="assets/img/cSharp.png" style="width: 100%;"> 
-                         </li>
-                         <li class="list-inline-item" style="height: 50px;width: 78px;">
-                           <img src="assets/img/netFramework.png" style="width: 100%;"> 
-                         </li>
+                            <img src="assets/img/cSharp.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 50px;width: 78px;">
+                            <img src="assets/img/netFramework.png" style="width: 100%;">
+                        </li>
                         <li class="list-inline-item" style="height: 76px;width: 160px;">
-                           <img src="assets/img/SQL_logo.png" style="width: 100%;"> 
-                         </li>                        
-                         <li class="list-inline-item" style="height: 50px;width: 53px;">
-                           <img src="assets/img/Javascript_logo.png" style="width: 100%;"> 
-                         </li>
-                          <li class="list-inline-item" style="height: 76px;width: 160px;">
-                           <img src="assets/img/KingswaySoft_logo.png" style="width: 100%;"> 
-                         </li>  
-                        <li class="list-inline-item" style="height: 76px;width: 160px;">
-                           <img src="assets/img/tibco_logo.png" style="width: 100%;"> 
-                         </li> 
-                         <li class="list-inline-item" style="height: 76px;width: 160px;">
-                           <img src="assets/img/postman_logo.png" style="width: 100%;"> 
-                         </li> 
-                         <li class="list-inline-item" style="height: 76px;width: 160px;">
-                           <img src="assets/img/zuora_logo.png" style="width: 100%;"> 
-                         </li> 
-                         <li class="list-inline-item" style="height: 76px;width: 160px;">
-                           <img src="assets/img/google-bigquery_logo.png" style="width: 100%;"> 
-                         </li> 
-                        <li class="list-inline-item" style="height: 76px;width: 105px;">
-                           <img src="assets/img/git_logo.png" style="width: 100%;"> 
-                         </li> 
-                       <li class="list-inline-item" style="height: 76px;width: 160px;">
-                           <img src="assets/img/Jira_logo.png" style="width: 100%;"> 
-                         </li> 
-                     
-<br><br>
-
-                         <li class="list-inline-item" style="height: 50px;width: 53px;">
-                           <img src="assets/img/html5_logo.png" style="width: 100%;"> 
-                         </li>
-                         <li class="list-inline-item" style="height: 50px;width: 53px;">
-                           <img src="assets/img/css3_logo.png" style="width: 100%;"> 
-                         </li>
+                            <img src="assets/img/SQL_logo.png" style="width: 100%;">
+                        </li>
                         <li class="list-inline-item" style="height: 50px;width: 53px;">
-                           <img src="assets/img/npm_logo.png" style="width: 100%;"> 
-                         </li>
-                         <li class="list-inline-item" style="height: 50px;width: 53px;">
-                           <img src="assets/img/bootstrap_logo.png" style="width: 100%;"> 
-                         </li>
+                            <img src="assets/img/Javascript_logo.png" style="width: 100%;">
+                        </li>
                         <li class="list-inline-item" style="height: 76px;width: 160px;">
-                           <img src="assets/img/ionic_framework_logo.png" style="width: 100%;"> 
-                         </li>
-                         <li class="list-inline-item" style="height: 76px;width: 160px;">
-                           <img src="assets/img/angular_logo.png" style="width: 100%;"> 
-                         </li>
-                         <li class="list-inline-item" style="height: 76px;width: 90px;">
-                           <img src="assets/img/php_logo.png" style="width: 100%;"> 
-                         </li>    
-                         <li class="list-inline-item" style="height: 76px;width: 160px;">
-                           <img src="assets/img/codeigniter_logo1.png" style="width: 100%;"> 
-                         </li>   
+                            <img src="assets/img/KingswaySoft_logo.png" style="width: 100%;">
+                        </li>
                         <li class="list-inline-item" style="height: 76px;width: 160px;">
-                           <img src="assets/img/java_android.png" style="width: 100%;"> 
-                         </li> 
+                            <img src="assets/img/tibco_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/postman_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/zuora_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/google-bigquery_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 105px;">
+                            <img src="assets/img/git_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/Jira_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 50px;width: 53px;">
+                            <img src="assets/img/html5_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 50px;width: 53px;">
+                            <img src="assets/img/css3_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 50px;width: 53px;">
+                            <img src="assets/img/npm_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 50px;width: 53px;">
+                            <img src="assets/img/bootstrap_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/ionic_framework_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/angular_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 90px;">
+                            <img src="assets/img/php_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/codeigniter_logo1.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/java_android.png" style="width: 100%;">
+                        </li>
                     </ul>
-                    <br>
+
                     <div class="subheading mb-3">Workflow</div>
                     <ul class="fa-ul mb-0">
                         <li>
                             <span class="fa-li"><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fas fa-check"></i> Font Awesome fontawesome.com --></span>
-                             Scrum, Waterfall methodology,
+                            Scrum, Waterfall methodology,
                         </li>
-            
+
                         <li>
                             <span class="fa-li"><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fas fa-check"></i> Font Awesome fontawesome.com --></span>
                             Responsive Design
@@ -348,12 +409,12 @@ I also have experience in other tools, languages, or things that I have learned 
                             <span class="fa-li"><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fas fa-check"></i> Font Awesome fontawesome.com --></span>
                             Cross Functional Teams
                         </li>
-                         <li>
+                        <li>
                             <span class="fa-li"><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fas fa-check"></i> Font Awesome fontawesome.com --></span>
-                           Work modality: On Site, Hybrid or Full Remote
+                            Work modality: On Site, Hybrid or Full Remote
                         </li>
 
-                        
+
                     </ul>
                 </div>
             </section>
@@ -363,10 +424,10 @@ I also have experience in other tools, languages, or things that I have learned 
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
                     <p>
-                     Personal interest in developing solutions that help your community in the city of Juárez, Chihuahua, and create a prototype to report anomalies on public roads.
-                     I like to watch conferences from Microsoft, Google, Amazon, etc. 
-                     My personal hobbies are doing sports activities such as walking, running or playing soccer. 
-                    I have a personal interest in dancing electro dance, bachata and norteña.
+                        Personal interest in developing solutions that help your community in the city of Juárez, Chihuahua, and create a prototype to report anomalies on public roads.
+                        I like to watch conferences from Microsoft, Google, Amazon, etc.
+                        My personal hobbies are doing sports activities such as walking, running or playing soccer.
+                        I have a personal interest in dancing electro dance, bachata and norteña.
                     </p>
                 </div>
             </section>
@@ -379,27 +440,377 @@ I also have experience in other tools, languages, or things that I have learned 
 
                         <li>
                             <span class="fa-li"><svg class="svg-inline--fa fa-trophy text-warning" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"></path></svg><!-- <i class="fas fa-trophy text-warning"></i> Font Awesome fontawesome.com --></span>
-                           Oracle Certified Professional, Java SE 6 Programmer
+                            Oracle Certified Professional, Java SE 6 Programmer
                         </li>
                         <li>
                             <span class="fa-li"><svg class="svg-inline--fa fa-trophy text-warning" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"></path></svg><!-- <i class="fas fa-trophy text-warning"></i> Font Awesome fontawesome.com --></span>
-                          Microsoft Certified: Dynamics 365 Fundamentals (CRM)
+                            Microsoft Certified: Dynamics 365 Fundamentals (CRM)
                         </li>
-                         <li>
+                        <li>
                             <span class="fa-li"><svg class="svg-inline--fa fa-trophy text-warning" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"></path></svg><!-- <i class="fas fa-trophy text-warning"></i> Font Awesome fontawesome.com --></span>
-                           Extra Miller recognition in 08 FY23 at AUTOZONE BUSINESS AND TECHNOLOGY STORE SUPPORT CENTER
+                            Extra Miller recognition in 08 FY23 at AUTOZONE BUSINESS AND TECHNOLOGY STORE SUPPORT CENTER
                         </li>
-
- 
-
                     </ul>
                 </div>
             </section>
-        </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    
+
+        </div><!-- Finish English -->
+
+        <div id="div_lang_ES" name="div_lang_ES" style="display: none;">
+            <!-- Start Spanish-->
+            <!-- Acerca De-->
+            <section class="resume-section" id="acerca">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Angel
+                        <span class="text-primary">Montelongo</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Juárez, CHH, MX.
+                        joseangel.moh@gmail.com
+                    </div>
+                    <p class="lead mb-5">
+                        Soy Ingeniero de Software con experiencia en el desarrollo de sitios Web, Sistemas .NET, Web APIS, Creación de procesos automáticos para diferentes propósitos.
+                        También en configuraciones o personalizaciones para Microsoft Power Platform y Dynamics 365 en el Frontend y Back End, creación o cambios en Dashboards o Reportes de Microsoft Power BI,
+                        Migración de Datos en Entidades de Microsoft Dynamics 365.
+                        Me gusta la investigación para resolver problemas de causa raíz.
+                        También tengo experiencia en otras herramientas, lenguajes o cosas que he aprendido en el camino.
+                    </p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/angel-montelongo/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/angelmh">  <i class="fab fa-github"></i>  </a>
+                        <a class="social-icon" href="https://drive.google.com/file/d/1rMFCYq9F1l3BVp5vEJ1OnvSI12096CAX/view?usp=drive_link" data-toggle="tooltip" data-placement="top" title="CV Compacto"> <svg class="svg-inline--fa fa-file-pdf" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V304H296 272 184 160c-35.3 0-64 28.7-64 64v80 48 16H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM160 352h24c30.9 0 56 25.1 56 56s-25.1 56-56 56h-8v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm24 80c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8v48h8zm88-80h24c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H272c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm24 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16h-8v96h8zm72-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H400v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H400v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg><!-- <i class="fa-solid fa-file-pdf"></i> Font Awesome fontawesome.com -->  </a>
+                        <a class="social-icon" href="https://drive.google.com/file/d/1qV1K78oE_BcMLy33msgE0nrcwka9VUUH/view?usp=drive_link" data-toggle="tooltip" data-placement="top" title="CV Completo"> <svg class="svg-inline--fa fa-file-pdf" aria-hidden="true" focusable="false" data-prefix="far" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zm96-112h24c30.9 0 56 25.1 56 56s-25.1 56-56 56h-8v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm24 80c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8v48h8zm72-64c0-8.8 7.2-16 16-16h24c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H272c-8.8 0-16-7.2-16-16V368zm32 112h8c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16h-8v96zm96-128h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H400v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H400v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368c0-8.8 7.2-16 16-16z"></path></svg><!-- <i class="fa-regular fa-file-pdf"></i> Font Awesome fontawesome.com --> </a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0">
+
+            <!-- Experiencia-->
+
+            <section class="resume-section" id="experiencia">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experiencia</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Programador Analista SR</h3>
+                            <div class="subheading mb-3">AutoZone Business and Technology Store Support Center  (Modalidad de Trabajo: híbrido) Cd.Chihuahua, CHH.</div>
+                            <p>
+                                La plataforma es un Customer Relationship Management (CRM) implementado en la nube con sus configuraciones y personalizaciones de clientes, con integraciones desde sistemas locales o de Terceros como Zuora.
+                                Los esfuerzos se centraron en sincronizar las suscripciones nuevas y modificadas de ZUORA con el CRM del cliente, así como en implementar requisitos funcionales y no funcionales para las configuraciones y personalizaciones de CRM.
+                            </p>
+                            <ul>
+                                <li>
+                                    Trabajé en la factorización de programas desarrollados en la tecnología Microsoft Power Apps y Plugins en la aplicación Microsoft Dynamics 365 Sales
+                                    donde se utilizaban suscripciones para cancelar parcialmente los productos o cancelar completamente la suscripción.
+                                    Así como la cancelación de suscripciones masivas.
+                                </li>
+                                <li>
+                                    Realicé y brindé recomendaciones para reparar el problema en temas relacionados con programas desarrollados
+                                    en la tecnología Tibco Cloud Integration con Microsoft Dynamics 365 Integration.
+                                </li>
+                                <li>
+                                    Desarrollé Reportes de Consultas sobre la plataforma de Suscripción y facturación (Zuora) que sirvió como Fuente de Datos para la migración a MS Dynamics 365 CRM-Dataverse.
+                                </li>
+                                <li>
+                                    Desarrollé Scripts, Microsoft Cloud Flows, Paquete Visual Studio SSIS con
+                                    Kingswaysoft y documentación para la migración de datos desincronizados en la
+                                    plataforma Zuora a Microsoft Dynamics 365 CRM. Lo que redujo en gran medida
+                                    los problemas de sincronización de datos en CRM y Zuora.
+                                    Y obtuve un reconocimiento Extra Miller en 08 FY23 por ese proyecto.
+                                </li>
+                                <li>Encargado de migraciones de datos para diferentes requerimientos en el CRM.</li>
+                                <li>
+                                    Creación de Reportes desde cero en Power BI utilizando conexiones como GCP Google BigQuery y Dataverse integrándolos al CRM del cliente.
+                                    Se realizaron actualizaciones a los informes existentes.
+                                </li>
+                                <li>Encargado de la administración de usuarios en Power BI.</li>
+                                <li>Se realizó un seguimiento con el proveedor de CRM para solucionar problemas relacionados con las interacciones del panel de CRM Power BI.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Marzo 2022 - Enero 2024</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Ingeniero en Sistemas MFG</h3>
+                            <div class="subheading mb-3">Foxconn (Modalidad de Trabajo: Presencial) Cd. Juárez, Chihuahua.</div>
+                            <p>
+                                El software era un Shop Floor Control (SFC), software implementado para 3 clientes simultáneamente y
+                                ejecutándose en 4 edificios diferentes para diferentes Unidades de Negocio (BU), es un sistema integrado con APIS,
+                                Servicios Web, lógica de negocios en Procedimientos almacenados, utilizando bibliotecas SAP y diferentes bases de datos dependiendo del Cliente.
+                                Los esfuerzos se centraron en el mantenimiento del software, como resolución de problemas,
+                                actualizaciones a nuevos requerimientos de clientes, nuevas reglas de negocio,
+                                integraciones con diferentes departamentos de la empresa y envío de datos de trazabilidad a través de API REST a clientes como Cisco y Pure Storage.
+                            </p>
+                            <ul>
+                                <li>Mantenimiento del Shop Floor Control (SFC) utilizado para la línea de producción del Cliente.</li>
+                                <li>Monitorear los programas configurados en el Task Scheduler para el correcto funcionamiento de los Sistemas.</li>
+                                <li>Soporte en líneas de producción para resolución de incidencias, Levantamiento y análisis de requerimientos.</li>
+                                <li>Creación de nuevos Procedimientos Almacenados y modificaciones lógicas en Oracle para corregir problemas de SFC.</li>
+                                <li>Creación de Web Service o APIS para conectar con sistemas de otros departamentos.</li>
+                                <li>Creación de nuevos candados, requeridas por Ingenieros de Calidad o Ingenieros de Procesos.</li>
+                                <li>Creación de reportes de datos o reportes visuales para ayudar al proceso de la Unidad de Negocio.</li>
+                                <li>Creación de Programas que envían información a través de APIS HTTP dependiendo de la lógica a la empresa sitio Foxconn FTX o Foxconn FCZ.</li>
+                                <li>Creé un programa para leer registros de prueba de las estaciones del Cliente consumiendo una API proporcionada por el Cliente e integrada con SFC.</li>
+                                <li>Implementación de etiquetas para SFC con CodeSoft o Zebra Programming Language (ZPL)</li>
+                                <li>Creación desde cero de un programa .NET para manufactura para uso de órdenes de trabajo y escaneo serial conectado a SAP.</li>
+                                <li>Creación desde cero de un programa .NET para la administración y gestión de Estenciles, Fixturas y herramientas PCBA de la empresa utilizado en los 4 edificios.</li>
+                                <li>Actualización de sistemas administrativos o de manufactura heredados actualización en la lógica de negocios y/o actualización del framework para su correcto funcionamiento.</li>
+                                <li>Recabacion de requerimientos en Reuniones con el equipo de CHINA (FOC-FOL) para implementar las reglas o requisitos de Seguridad al lado local.</li>
+                                <li>Apoyo de soluciones y análisis para la implementación del sistema de Reconocimiento Facial.</li>
+                                <li>Creación desde cero de un programa administrativo para la creación de usuarios en el directorio activo, base de datos, backend, front end.</li>
+                                <li>Recorrido por las líneas de producción con el cliente para mostrar el sistema.</li>
+                                <li>Entrenamiento por el equipo de CHINA para la implementación de sistemas en el sitio.</li>
+                                <li>Creación de reportes para la sala de conferencias de gerencia, realizados en C# y librerías JavaScript, CSS3, HTML5.</li>
+                                <li>Consumo de Reportes desarrollado en Tableau Embedded en C#, utilizando Tokens.</li>
+                                <li>Creación de Layouts en el software Control Point para la manipulación de diferentes objetos web de las 15 pantallas unidas para la sala de conferencias de gerencia</li>
+                                <li>Contribucion en la creación de Reglas, Procedimientos Almacenados para la creación de Reportes BI Tableau mostrados en la sala de conferencia.</li>
+                                <li>Mantenimiento de aplicaciones Android heredadas para las líneas de producción.</li>
+                            </ul>
+
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Noviembre 2017 - Marzo 2022</span></div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Intern Tech</h3>
+                            <div class="subheading mb-3">DXC Technology (Modalidad de Trabajo: Presencial)</div>
+                            <p>
+                                La gestión de la configuración es un proceso dentro de la ingeniería de software que rastrea y monitorea los cambios en el código fuente del programa y/o la documentación funcional y no funcional del sistema.
+                                Los esfuerzos se centraron en contribuir a la automatización del proceso CM para facilitar las actividades diarias de revisión de código y documentos según los estándares de los clientes del Servicio de Administración Tributaria (SAT).
+                            </p>
+                            <ul>
+                                <li>Las tareas principales fueron en Gestión de Configuración, revisiones de estándares de codificación, documentación administrativa y de sistemas.</li>
+                                <li>Desarrollo, prueba, depuración de programas para la automatización del proceso CM.</li>
+                                <li>Revisión de la documentación de requisitos del sistema y documentación administrativa.</li>
+                                <li>Revisión de código Java según estándar del cliente.</li>
+                                <li>Se logró la migración exitosa de las plataformas Starteam a SharePoint 2016 y Github Enterprise.</li>
+                                <li>Desarrollo de un programa para concentrar información extraída de documentos Excel, Word, SharePoint y contenidos de datos utilizando C# y librerías.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Marzo 2016 – Marzo 2017</span></div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Programador Web - Practicas Profesionales </h3>
+                            <div class="subheading mb-3">JUAREZSOFT CONSULTING (Modalidad de Trabajo: Presencial)</div>
+                            <p>
+                                Análisis, diseño, desarrollo y pruebas de requerimientos en Backend utilizando el lenguaje de programación PHP y diferentes conexiones con Servicios Web SOAP WDSL, APIs
+                            </p>
+                            <ul>
+                                <li>Desarrollo de módulo de compra de boletos consumiendo APIs de Terceros como Conekta (pagos en línea con tarjetas de crédito o débito), Google Maps, Google y Facebook Authentication </li>
+                                <li>Mantenimiento de Servicios Web SOAP WSDL, API y Páginas Web</li>
+                                <li>Pruebas de consumo en Postman de las API de servicios web de Amazon (AWS) del principal producto de la compañia</li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">October 2015 – Feb 2016</span></div>
+                    </div>
+
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Programador Web</h3>
+                            <div class="subheading mb-3">Proyecto Computación Juárez (Modalidad de Trabajo: Presencial)</div>
+                            <ul>
+                                <li>
+                                    Creación de un sistema web desde cero para un negocio de suministro de comida local. 
+                                    Utilizando el Framework PHP Codeigniter y MySQL como base de datos, JavasScript y Bootstrap para el Frontend,
+                                    funcionalidades para imprimir etiquetas, calcular el total de carne desperdiciada e iniciar sesión
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Agosto 2014 – Octubre 2015</span></div>
+                    </div>
+
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Asistente de investigación - Servicio Social</h3>
+                            <div class="subheading mb-3">DR. Youness El Hamzoui AT UACJ (Modalidad de Trabajo: Presencial)</div>
+                            <ul>
+                                <li>Instalación de software de gestión y minería de datos</li>
+                                <li>Desarrollar simulaciones 2D y 3D en MATLAB</li>
+                                <li>Contribuir a la programación de algoritmos inteligentes en MATLAB y C++.</li>
+                                <li>Apoyo en la administración y control de acceso del laboratorio</li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Febrero 2014 – Mayo 2014</span></div>
+                    </div>
+
+                </div>
+            </section>
+            <hr class="m-0">
+
+            <!-- Educacion-->
+            <section class="resume-section" id="educacion">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Educación</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Universidad Autónoma de Ciudad Juárez (UACJ)</h3>
+                            <div class="subheading mb-3">Licenciatura</div>
+                            <div>Ingeniería en Software</div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Agosto 2011 - Junio 2016</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Colegio de Bachilleres del Estado de Chihuahua Plantel 5 (COBACH 5)</h3>
+                            <div class="subheading mb-3">Especialidad en Contabilidad y Probabilidad y Estadistica</div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Agosto 2008 - Junio 2011</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0">
+
+            <!-- Habilidades-->
+            <section class="resume-section" id="habilidades">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Habilidades</h2>
+                    <div class="subheading mb-3">Lenguajes de Programación &amp; Herramientas</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item" style="height: 76px;width: 230px;">
+                            <img src="assets/img/PowerPlatform_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/Dynamics365_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 50px;width: 78px;">
+                            <img src="assets/img/cSharp.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 50px;width: 78px;">
+                            <img src="assets/img/netFramework.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/SQL_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 50px;width: 53px;">
+                            <img src="assets/img/Javascript_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/KingswaySoft_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/tibco_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/postman_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/zuora_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/google-bigquery_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 105px;">
+                            <img src="assets/img/git_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/Jira_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 50px;width: 53px;">
+                            <img src="assets/img/html5_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 50px;width: 53px;">
+                            <img src="assets/img/css3_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 50px;width: 53px;">
+                            <img src="assets/img/npm_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 50px;width: 53px;">
+                            <img src="assets/img/bootstrap_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/ionic_framework_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/angular_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 90px;">
+                            <img src="assets/img/php_logo.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/codeigniter_logo1.png" style="width: 100%;">
+                        </li>
+                        <li class="list-inline-item" style="height: 76px;width: 160px;">
+                            <img src="assets/img/java_android.png" style="width: 100%;">
+                        </li>
+                    </ul>
+
+                    <div class="subheading mb-3">Flujo de trabajo</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fas fa-check"></i> Font Awesome fontawesome.com --></span>
+                            Metodologías: Scrum, Cascada, incremental
+                        </li>
+
+                        <li>
+                            <span class="fa-li"><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fas fa-check"></i> Font Awesome fontawesome.com --></span>
+                             Diseño Responsive
+                        </li>
+                        <li>
+                            <span class="fa-li"><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fas fa-check"></i> Font Awesome fontawesome.com --></span>
+                            Pruebas entre navegadores &amp; Depuración
+                        </li>
+                        <li>
+                            <span class="fa-li"><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fas fa-check"></i> Font Awesome fontawesome.com --></span>
+                            Cross Functional Teams
+                        </li>
+                        <li>
+                            <span class="fa-li"><svg class="svg-inline--fa fa-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fas fa-check"></i> Font Awesome fontawesome.com --></span>
+                            Modalidad de trabajo: Presencial, Híbrido o Remoto
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0">
+
+            <!-- Intereses-->
+            <section class="resume-section" id="intereses">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Intereses</h2>
+                    <p>
+                        Interés personal en desarrollar soluciones que ayuden a mi comunidad en ciudad de Juárez, Chihuahua .
+                        Me gusta ver conferencias de Microsoft, Google, Amazon, etc.
+                        Mis pasatiempos personales son realizar actividades deportivas como caminar, correr o jugar al fútbol.
+                        Tengo un interés personal en bailar electro dance, bachata y norteña.
+                    </p>
+                </div>
+            </section>
+            <hr class="m-0">
+
+            <!-- Reconocimientos -->
+            <section class="resume-section" id="reconocimientos">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Reconocimientos &amp; Certificaciones</h2>
+                    <ul class="fa-ul mb-0">
+
+                        <li>
+                            <span class="fa-li"><svg class="svg-inline--fa fa-trophy text-warning" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"></path></svg><!-- <i class="fas fa-trophy text-warning"></i> Font Awesome fontawesome.com --></span>
+                            Oracle Certified Professional, Java SE 6 Programmer
+                        </li>
+                        <li>
+                            <span class="fa-li"><svg class="svg-inline--fa fa-trophy text-warning" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"></path></svg><!-- <i class="fas fa-trophy text-warning"></i> Font Awesome fontawesome.com --></span>
+                            Microsoft Certified: Dynamics 365 Fundamentals (CRM)
+                        </li>
+                        <li>
+                            <span class="fa-li"><svg class="svg-inline--fa fa-trophy text-warning" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"></path></svg><!-- <i class="fas fa-trophy text-warning"></i> Font Awesome fontawesome.com --></span>
+                            Reconocimiento Extra Miller en Periodo 08 FY23 at AUTOZONE BUSINESS AND TECHNOLOGY STORE SUPPORT CENTER
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </div> <!-- Finish Spanish-->
+
+</div>
+
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
 
 </body></html>
